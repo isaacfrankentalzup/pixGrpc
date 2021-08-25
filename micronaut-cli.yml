@@ -1,0 +1,6 @@
+applicationType: grpc
+defaultPackage: br.com.zupedu
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: gradle
+features: [annotation-api, app-name, data, data-jpa, gradle, grpc, hibernate-jpa, hibernate-validator, jdbc-hikari, kotest, kotlin, kotlin-application, logback, mysql, readme, shade, testcontainers, yaml]

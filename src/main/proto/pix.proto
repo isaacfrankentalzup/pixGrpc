@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.zupedu";
+option java_outer_classname = "Pix";
+option objc_class_prefix = "HLW";
+
+package br.com.zupedu;
+
+service PixService {
+ rpc criaChave(request) returns (response){}
+}
+
+message request{
+    string idCliente  = 1;
+    string valorChave = 2;
+    TipoChave tipoChave = 3;
+    TipoConta tipoConta = 4;
+}
+
+message response{
+    string valorChave = 1;
+    TipoChave tipoChave = 2;
+    TipoConta tipoConta = 3;
+}
+
+
+enum TipoChave{
+    CPF = 0;
+    TELEFONE = 1;
+    EMAIL = 2;
+    ALEATORIO = 3;
+}
+
+enum TipoConta{
+   CONTACORRENTE = 0;
+   CONTAPOUPANCA = 1;
+}
+
+
+
+
